@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Mijn gegevens</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/david_gegevens.css">
+    </head>
+    <body>
+        <header>
+            <h1>Mijn gegevens</h1>
+            <h2>Naam, adres, woonplaats en bericht van gebruiker</h2>
+        </header>
+        <form>
+            <label>Vul uw gegevens in</label>
+            <input id="inputNaam" type="text" name="naam" placeholder="Vul uw voornaam en achternaam in">
+            <input id="inputAdres" type="text" name="adres" placeholder="Vul uw adres en woonplaats in">
+            <textarea id="tekstVeld"></textarea>
+        </form>
+        <button id="buttonClick" type="submit">Klik voor output gegevens</button>
+        <script>
+            $(document).ready(function() {
+              $("#buttonClick").click(function() {
+                var naam = $("#inputNaam").val();
+                var adres = $("#inputAdres").val();
+                var tekstVeld = $("#tekstVeld").val();
+                window.alert("Hello world, mijn naam en adres zijn: " + naam + ", " + adres + " en dit is mijn bericht: " + tekstVeld);
+              });
+            });
+        </script>
+    </body>
+</html>
